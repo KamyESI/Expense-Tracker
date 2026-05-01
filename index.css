@@ -269,12 +269,6 @@ button:active {
   }
   #transaction-form {
     height: 100%;
-    position: relative;
-  }
-
-  #transaction-form button {
-    position: absolute;
-    bottom: 10px;
   }
 }
 
