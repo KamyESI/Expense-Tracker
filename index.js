@@ -88,13 +88,13 @@ function removeTransaction(id) {
   transactions = JSON.parse(localStorage.getItem("transactions"));
   showTransctList(transactions);
 
-  let total = 0;
+  let totl = 0;
   let income = 0;
   let expense = 0;
 
   transactions.forEach((t) => {
     const amount = Number(t.amount);
-    total += amount;
+    totl += amount;
 
     if (amount > 0) {
       income += amount;
@@ -103,11 +103,11 @@ function removeTransaction(id) {
     }
   });
 
-  globalAmount.innerHTML = formatCurrency(total);
+  globalAmount.innerHTML = formatCurrency(totl);
   incomeAmount.innerHTML = formatCurrency(income);
   expenseAmount.innerHTML = formatCurrency(Math.abs(expense));
 
-  localStorage.setItem("total", JSON.stringify(total));
+  localStorage.setItem("total", JSON.stringify(totl));
   localStorage.setItem("income", JSON.stringify(income));
   localStorage.setItem("expense", JSON.stringify(expense));
 }
