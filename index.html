@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Expense Tracker</h1>
+      <div id="balance">
+        <h2 id="global-balance">Your Balance</h2>
+        <p id="global-amount">$0.00</p>
+        <div class="income-expenses">
+          <div class="income">
+            <h3>Income</h3>
+            <p id="income-amount">$0.00</p>
+          </div>
+          <div class="expences">
+            <h3>Expenses</h3>
+            <p id="expense-amount">$0.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="transactions">
+        <div class="history-transaction">
+          <h3>Transactions</h3>
+          <ul class="transaction-list">
+            <!-- TRANSACTIONS WILL BE INSERTED VIA JS CODE -->
+          </ul>
+        </div>
+        <div class="add-transaction">
+          <h3>Add Transaction</h3>
+          <form id="transaction-form">
+            <p>
+              <label for="description">Description</label><br />
+              <input
+                type="text"
+                name="description"
+                id="description"
+                placeholder="Enter description..."
+                required
+              />
+            </p>
+            <p>
+              <label for="amount">Amount</label><br />
+              <input
+                type="number"
+                name="amount"
+                id="amount"
+                placeholder="Enter amount..."
+                required
+              />
+            </p>
+            <p class="note">Use negative (-) for expenses</p>
+            <button type="submit">Add Transaction</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
